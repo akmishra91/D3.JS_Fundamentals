@@ -1,0 +1,26 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Data Driven Documents (D3.JS)</title>
+    </head>
+    <body>
+        <div id="page-header">
+            <h1>Hello World !</h1>
+        </div>
+        <p class="main-paragraph">This is my first paragraph to check the d3.js functionality</p>
+        <p>This is my second paragraph to check the functionality of d3.js.</p>
+    </body>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script>
+     
+    let header = d3.select("#page-header");
+    console.log(header.node()); // to show single item we useed node() here 
+
+    let ps = d3.selectAll("p")
+    console.log(ps.nodes()) // to show multiples items we useed nodes() here 
+    </script>
+    
+    </html>
