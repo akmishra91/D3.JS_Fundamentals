@@ -9,18 +9,31 @@
     //example 2 starts here 
     //selection.text & selection.html
 
+    let itemList = d3.select("#itemList")
+
+    function count(){
+         return itemList.selectAll("li").size();
+    }
+
     function change1(){
-       let p = d3.select(".main-paragraph")
-       p.text("New Text");
+    //    let p = d3.select(".main-paragraph")
+    //    p.text("New Text");
+
+    let c = count() + 1;
+
+    itemList.append("li")
+            .text("Item " + c)
     }
     function change2(){
-       d3.selectAll("p").text("New Text 2")
+       itemList.selectAll("li").remove();
     }
     function change3(){
-       d3.select("p")
-       .html("<b>test</b> normal")
+    //    d3.select("p")
+    //    .html("<b>test</b> normal")
+
+     itemList.select("li:last-child").remove();
     }
-    function change4(){
-       d3.select("p")
-       .text("<b>test</b> normal")
-    }
+    // function change4(){
+    //    d3.select("p")
+    //    .text("<b>test</b> normal")
+    // }
